@@ -1,1 +1,2 @@
-Base File
+Index File
+[Blog Details](blog.md)
