@@ -1,0 +1,7 @@
+﻿{
+  "title": "My first blog entry",
+  "subTitle":  "This is the sub-title",
+  "author": "Muqeet Khan",
+  "content": "This is some content that I want to show up as my blog",
+  "entryDate": "2016-12-31"
+}

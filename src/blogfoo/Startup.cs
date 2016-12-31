@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using blogfoo.Data;
 using blogfoo.Models;
 using blogfoo.Services;
+using blogfoo.Options;
 
 namespace blogfoo
 {
@@ -22,7 +23,8 @@ namespace blogfoo
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddJsonFile("blogfoo.json");
 
             if (env.IsDevelopment())
             {
@@ -39,6 +41,9 @@ namespace blogfoo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<Global>(Configuration.GetSection("global"));
+            services.Configure<Navigation>(Configuration.GetSection("navigation"));
+
             // Add framework services.
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -52,6 +57,7 @@ namespace blogfoo
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+            services.AddTransient<IBlogReader, BlogReader>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

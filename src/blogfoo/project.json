@@ -85,6 +85,7 @@
       "wwwroot",
       "**/*.cshtml",
       "appsettings.json",
+      "blogfoo.json",
       "web.config"
     ]
   },

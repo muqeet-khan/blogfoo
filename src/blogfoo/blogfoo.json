@@ -1,5 +1,26 @@
 ﻿{
+  "global": {
+    "title": "Blog Foo - Muqeet Khan",
+    "author": "Muqeet Khan"
+  },
 
-  "title": "Blog Foo - Muqeet Khan"
+  "navigation": {
+    "navs": [
+      {
+        "itemTitle": "Item 1",
+        "itemLink": "https://www.muqeetkhan.com"
 
+      },
+      {
+        "itemTitle": "item2",
+        "itemLink": "https://family.muqeetkhan.com"
+      },
+      {
+        "itemTitle": "item3",
+        "itemLink": "https://photography.muqeetkhan.com"
+      }
+    ]
+  }
 }
+
+
