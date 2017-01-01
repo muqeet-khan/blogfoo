@@ -8,6 +8,7 @@ namespace blogfoo.Services
 {
     public interface IBlogReader
     {
-        Task<Entry> ReadBlogEntryAsync(string BlogTitle);
+        Task<string> ReadEntryAsync(string BlogTitle);
+        Task<Entry> ReadEntryMetadataAsync(string BlogTitle);
     }
 }

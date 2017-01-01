@@ -68,7 +68,8 @@ namespace blogfoo
 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
+                app.UseExceptionHandler("/Home/Error");
                 app.UseDatabaseErrorPage();
                 app.UseBrowserLink();
             }

@@ -17,10 +17,17 @@ namespace blogfoo.Services
         {
             _env = env;
         }
-        public Task<Entry> ReadBlogEntryAsync(string BlogTitle)
+
+        public Task<string> ReadEntryAsync(string BlogTitle)
         {
-            var provider = File.ReadAllText(Path.Combine(_env.WebRootPath, "data", "1216", "my-first-blog.json"));
-            return Task.Factory.StartNew(()=> JsonConvert.DeserializeObject<Entry>(provider));
+            var content = File.ReadAllText(Path.Combine(_env.WebRootPath, "data", "1216", $"{BlogTitle}.md"));
+            return Task.Factory.StartNew(() => { return content; });
+        }
+
+        public Task<Entry> ReadEntryMetadataAsync(string BlogTitle)
+        {
+            var provider = File.ReadAllText(Path.Combine(_env.WebRootPath, "data", "1216", $"{BlogTitle}.json"));
+            return Task.Factory.StartNew(() => JsonConvert.DeserializeObject<Entry>(provider));
         }
     }
 }

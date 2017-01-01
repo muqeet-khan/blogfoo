@@ -1,7 +1,8 @@
 ﻿{
   "global": {
     "title": "Blog Foo - Muqeet Khan",
-    "author": "Muqeet Khan"
+    "author": "Muqeet Khan",
+    "type": "Markdown"
   },
 
   "navigation": {

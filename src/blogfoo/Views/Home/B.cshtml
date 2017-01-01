@@ -1,0 +1,19 @@
+﻿@model Entry
+@{
+    ViewData["Title"] = Model.Title;
+}
+<div class="row">
+    <h1 class="text-danger">@Model.Title</h1>
+    <h4 class="text-warning">@Model.SubTitle</h4>
+</div>
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        @Html.Raw(Model.content)
+    </div>
+</div>
+<div class="row">
+    Author: @Model.Author
+</div>
+<div class="row">
+    Date: @Model.EntryDate
+</div>
