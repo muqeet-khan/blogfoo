@@ -13,5 +13,7 @@ namespace blogfoo.Models.Blogs
         public string SubTitle { get; set; }
         public string content { get; set; }
         public DateTime EntryDate { get; set; }
+        public string EntryFileName { get; set; }
+        public string FeaturedContent { get; set; }
     }
 }

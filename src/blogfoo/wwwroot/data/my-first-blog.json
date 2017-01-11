@@ -1,0 +1,8 @@
+﻿{
+  "title": "blogfoo - Introduction",
+  "subTitle": "ASP.NET Core based micro blogging platform",
+  "author": "Muqeet Khan",
+  "entryDate": "2016-12-31",
+  "entryFileName": "my-first-blog",
+  "featuredContent": "blogfoo is a simple micro blogging platform based on ASP.NET Core. It utilizes Markdown files for powering the blog content. The purpose of this is not to make the \"Next Big Thing\" rather just something I could use personally, because, why not. "
+}
